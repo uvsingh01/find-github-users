@@ -1,4 +1,4 @@
-# Random-user-Api
+# github user finder
 
 #### By Yuvraj Singh
 

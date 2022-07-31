@@ -5,7 +5,7 @@
 
 # Description
 
- In this project we use the URL of the random userme API, which will be used to get information about users on this website.
+ In this project we use the URL of the GITHUB API, which will be used to get information about users on this website.
  These values are retrieved from the API using JavaScript's built-in JSON parsing function (JSON stands for JavaScript Object Notation).
  There is a button when it clicked, it will send a request to the API for and available information about the user to display it on screen.
  The code is a simple example of how to use the RandomUser API.

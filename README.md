@@ -14,7 +14,7 @@
  
  Web API is a programming interface/application type that provides communication or interaction between software applications.
  Web API is often used to provide an interface for websites and client applications to have data access.
- Here i used async awiat to handle promise and learned about how to retrive the data from api and render on UI.
+ Here i used async await to handle promise and learned about how to retrive the data from api and render on UI.
  
  
  ## Technologies Used
@@ -55,8 +55,8 @@
     
  </table>
  
- The project Random User Generator App is a mini project JavaScript. In which I have used HTML in little amount, CSS for styling and 
- JavaScript to handle the <a href="">Api call</a> .
+ The project Github user finder App is a mini project JavaScript. In which I have used HTML in little amount, CSS for styling and 
+ JavaScript to handle the api.
 
 ## Click for preview
 <a href="">Visit here</a>

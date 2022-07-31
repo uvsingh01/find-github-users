@@ -5,10 +5,7 @@
 
 # Description
 
- In this project we use the URL of the GITHUB API, which will be used to get information about users on this website.
- These values are retrieved from the API using JavaScript's built-in JSON parsing function (JSON stands for JavaScript Object Notation).
- There is a button when it clicked, it will send a request to the API for and available information about the user to display it on screen.
- The code is a simple example of how to use the RandomUser API.
+ The code starts by creating a function called getUser that takes in the username as an argument. It then creates a variable called data which is set to be the response from axios, and it sets up two functions: createUserCard and getRepos. The code starts by calling the function with APIURL + username, which will return data for any user on GitHub who has their username as "username". The first thing this does is check if there was an error or not. If there wasn't, it calls createUserCard with the data returned from axios, which will make a card for that user on our website. Then we call getRepos with that same username to see what repositories they have created. The code is an example of how to use axios and createUserCard. The code above will attempt to fetch the user from the API and then it will create a card for that user. If there was an error, it will show a 404 response.
  
  # WHY this project was chosen ?
  

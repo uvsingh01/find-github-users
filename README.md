@@ -56,4 +56,4 @@
  JavaScript to handle the api.
 
 ## Click for preview
-<a href="">Visit here</a>
+<a href="https://uvsingh01.github.io/find-github-users/">Visit here</a>

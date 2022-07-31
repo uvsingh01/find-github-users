@@ -3,6 +3,15 @@ const main = document.getElementById('main')
 const form = document.getElementById('form')
 const search = document.getElementById('search')
 
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    const user = search.value
+
+        getUser(user)
+
+        search.value = ''
+})
 async function getUser(username) {
     try {
         const { data } = await axios(APIURL + username)
@@ -19,7 +28,6 @@ async function getUser(username) {
 async function getRepos(username) {
     try {
         const { data } = await axios(APIURL + username + '/repos?sort=created')
-
         addReposToCard(data)
     } catch(err) {
         createErrorCard('Problem fetching repos')
@@ -38,9 +46,9 @@ function createUserCard(user) {
       <h2>${userID}</h2>
       ${userBio}
       <ul>
-        <li>${user.followers} <strong>Followers</strong></li>
-        <li>${user.following} <strong>Following</strong></li>
-        <li>${user.public_repos} <strong>Repos</strong></li>
+        <li>${user.followers} <p>&nbspFollowers&nbsp</p></li>
+        <li>${user.following} <p>&nbspFollowing&nbsp</p></li>
+        <li>${user.public_repos} <p>&nbspRepos&nbsp</p></li>
       </ul>
 
       <div id="repos"></div>
@@ -62,30 +70,19 @@ function createErrorCard(msg) {
 }
 
 function addReposToCard(repos) {
-    const reposEl = document.getElementById('repos')
+    const reposlist = document.getElementById('repos')
 
     repos
-        .slice(0, 7)
+        .slice(0, 3)
         .forEach(repo => {
-            const repoEl = document.createElement('a')
-            repoEl.classList.add('repo')
-            repoEl.href = repo.html_url
-            repoEl.target = '_blank'
-            repoEl.innerText = repo.name
-
-            reposEl.appendChild(repoEl)
+            const repolist = document.createElement('a')
+            repolist.classList.add('repo')
+            repolist.href = repo.html_url
+            repolist.target = '_blank'
+            repolist.innerText = repo.name
+            reposlist.appendChild(repolist)
         })
 }
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault()
 
-    const user = search.value
-
-    // if(user) {
-        getUser(user)
-
-        search.value = ''
-    // }
-})
 
